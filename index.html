@@ -3,52 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body class="w-screen h-screen flex items-center justify-center">
-    <div class="flex items-center justify-center w-1/2 h-full bg-[url(./assets/img/zenitsu_dark.png)] bg-no-repeat bg-center bg-cover bg-[2px_-350px]">
+    <div class="flex items-center justify-center w-1/2 h-full bg-[image:var(--zenit-img)] bg-cover bg-no-repeat xl:bg-[2px_-550px]">
       <div class="w-full h-full bg-[#fff] opacity-15">
       </div>
     </div>
-    <div class="flex items-center px-30 py-40 bg-slate-700 justify-center w-1/2 h-full">
-      <div class="w-full h-full bg-slate-800 backdrop-blur-md p-8 shadow-2xl border border-white/30 rounded-2xl p-8"> 
-          <h2 class="text-3xl font-bold text-center text-[#fb991e] mb-20 mt-10">Connexion</h2>
+    <div class="flex flex-col justify-center items-center px-30 gap-32 bg-gradient-to-b from-[var(--primary-color)]/50 to-[var(--primary-color)]/90 justify-center w-1/2 h-full">
+      <!-- <div class="bg-red-400 absolute top-12 right-12 z-10 w-[calc(50%-100px)] h-15">
+
+      </div> -->
+      <div class="w-[calc(110%)] mt-12 h-20 flex items-center justify-between">
+        <span class="text-3xl font-bold">log<span class="text-[var(--primary-color)]">o</span></span>
+        <div class="p-1 w-11 rounded-full bg-pink-900 flex">
+          <button class="rounded-full w-9 h-9 p-1 bg-green-400">
+            <div class="w-full h-full bg-[image:var(--toogle-icons)] bg-cover bg-no-repeat"></div>
+          </button>
+        </div>
+      </div>
+      <div class="w-full h-full mb-24 bg-white backdrop-blur-md shadow-2xl border border-white/30 rounded-2xl p-8"> 
+          <h2 class="text-3xl font-bold text-center text-[var(--primary-color)] mb-20 mt-10">Connexion</h2>
           
           <form action="#" class="space-y-6">
             <!-- Email -->
             <div>
-              <label class="block text-sm font-medium text-white/60">Adresse Email</label>
+              <label class="block text-sm font-medium text-gray-800">Adresse Email</label>
               <input type="email" placeholder="nom@exemple.com" 
-                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#fb991e] focus:border-[#fb991e] outline-none transition-all">
+                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] outline-none transition-all">
             </div>
     
             <!-- Password -->
             <div>
-              <label class="block text-sm font-medium text-white/60">Mot de passe</label>
+              <label class="block text-sm font-medium text-gray-800">Mot de passe</label>
               <input type="password" placeholder="••••••••" 
-                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#fb991e] focus:border-[#fb991e] outline-none transition-all">
+                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] outline-none transition-all">
             </div>
     
             <!-- Options -->
             <div class="flex items-center justify-between text-sm">
               <label class="flex items-center text-gray-600">
-                <input type="checkbox" class="rounded border-gray-300 text-[#fb991e] focus:ring-[#fb991e]">
+                <input type="checkbox" class="rounded border-gray-300 text-[var(--primary-color)] focus:ring-[var(--primary-color)]">
                 <span class="ml-2">Se souvenir de moi</span>
               </label>
-              <a href="#" class="text-[#fb991e] hover:underline font-semibold">Mot de passe oublié ?</a>
+              <a href="#" class="text-[var(--primary-color)] hover:underline font-semibold">Mot de passe oublié ?</a>
             </div>
     
             <!-- Submit Button -->
             <button type="submit" 
-              class="w-full py-3 px-4 bg-[#fb991e] hover:bg-[#e88a1b] text-white font-bold rounded-lg shadow-lg hover:shadow-[#fb991e]/30 transition-all transform active:scale-[0.98]">
+              class="w-full py-3 px-4 bg-[var(--primary-color)] hover:bg-[#e88a1b] text-white font-bold rounded-lg shadow-lg hover:shadow-[var(--primary-color)]/30 transition-all transform active:scale-[0.98]">
               Se connecter
             </button>
           </form>
     
           <p class="mt-8 text-center text-sm text-gray-600">
             Pas encore de compte ? 
-            <a href="#" class="text-[#fb991e] font-bold hover:underline">S'inscrire</a>
+            <a href="#" class="text-[var(--primary-color)] font-bold hover:underline">S'inscrire</a>
           </p>
         
       </div>
@@ -56,4 +67,4 @@
 
   </body>
 </html>
-<!-- bg-[#fb991e] -->
+<!-- bg-[var(--primary-color)] -->

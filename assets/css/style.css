@@ -1,6 +1,21 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @theme {  
     --color-leo:#fb991e;
+    --color-primary:#ff0000;
     
-}
+} */
 
+
+@layer base {
+    :root {
+      --primary-color:#fb991e;
+      --zenit-img:url(./assets/img/zenitsu.jpeg);
+      --toogle-icons:url(./assets/img/zenitsu.jpeg)
+    }
+    
+    .dark {
+      --primary-color: #2b1a04;
+      --zenit-img:url(./assets/img/zenitsu_dark.png);
+
+    }
+}
