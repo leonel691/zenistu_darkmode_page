@@ -4,18 +4,22 @@
     --color-primary:#ff0000;
     
 } */
+@import "tailwindcss";
+@theme {
+  --breakpoint-yo: 30rem;
+  --breakpoint-yo2: 53.125rem;
+}
+
 
 
 @layer base {
     :root {
       --primary-color:#fb991e;
-      --zenit-img:url(./assets/img/zenitsu.jpeg);
-      --toogle-icons:url(./assets/img/zenitsu.jpeg)
+      --zenit-img:url(./assets/img/zenitHead.jpeg);
     }
     
     .dark {
       --primary-color: #2b1a04;
       --zenit-img:url(./assets/img/zenitsu_dark.png);
-
     }
 }

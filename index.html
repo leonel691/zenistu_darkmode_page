@@ -1,70 +1,112 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
-  <body class="w-screen h-screen flex items-center justify-center">
-    <div class="flex items-center justify-center w-1/2 h-full bg-[image:var(--zenit-img)] bg-cover bg-no-repeat xl:bg-[2px_-550px]">
-      <div class="w-full h-full bg-[#fff] opacity-15">
-      </div>
-    </div>
-    <div class="flex flex-col justify-center items-center px-30 gap-32 bg-gradient-to-b from-[var(--primary-color)]/50 to-[var(--primary-color)]/90 justify-center w-1/2 h-full">
-      <!-- <div class="bg-red-400 absolute top-12 right-12 z-10 w-[calc(50%-100px)] h-15">
 
-      </div> -->
-      <div class="w-[calc(110%)] mt-12 h-20 flex items-center justify-between">
-        <span class="text-3xl font-bold">log<span class="text-[var(--primary-color)]">o</span></span>
-        <div class="p-1 w-11 rounded-full bg-pink-900 flex">
-          <button class="rounded-full w-9 h-9 p-1 bg-green-400">
-            <div class="w-full h-full bg-[image:var(--toogle-icons)] bg-cover bg-no-repeat"></div>
-          </button>
-        </div>
-      </div>
-      <div class="w-full h-full mb-24 bg-white backdrop-blur-md shadow-2xl border border-white/30 rounded-2xl p-8"> 
-          <h2 class="text-3xl font-bold text-center text-[var(--primary-color)] mb-20 mt-10">Connexion</h2>
-          
-          <form action="#" class="space-y-6">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --breakpoint-yo: 30rem;
+      --breakpoint-yo2: 53.125rem;
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="w-screen h-screen overflow-hidden">
+  <div class="w-full h-full flex flex-col yo2:flex-row">
+    <div
+      class="hidden yo2:block yo2:w-1/2 h-full bg-[image:var(--zenit-img)] bg-no-repeat bg-cover yo2:[background-position:0px_0px]">
+    </div>
+    <div
+      class="w-full yo2:w-1/2 h-full flex flex-col justify-end bg-[image:var(--zenit-img)] yo2:bg-none bg-no-repeat bg-contain [background-position:0px_-100px] yo:[background-position:0px_-150px] sm:[background-position:0px_-200px] md:[background-position:0px_-280px]">
+    <div class="w-full h-[80%] yo:h-[76%] yo2:h-full yo2:rounded-none rounded-t-[2rem] bg-white">
+      <div
+        class="w-full h-full rounded-t-[2rem] yo2:rounded-none pt-12 yo2:pt-15 lg:pt-5 xl:pt-0 px-4">
+        <div class="h-full flex flex-col gap-8 items-center yo2:mt-0 xl:pt-16">
+          <h1 class="text-[3rem] yo2:mt-20 lg:mt-25 font-bold text-[var(--primary-color)]">connexion</h1>
+          <form action="#"
+            class="w-full yo2:max-w-[575px] xl:px-10 p-4 space-y-6 sm:p-5 md:p-6">
             <!-- Email -->
-            <div>
-              <label class="block text-sm font-medium text-gray-800">Adresse Email</label>
-              <input type="email" placeholder="nom@exemple.com" 
-                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] outline-none transition-all">
+            <div class="space-y-2">
+              <label class="ml-1 block text-sm font-semibold text-gray-700 sm:text-base">Adresse Email</label>
+              <input type="email" placeholder="nom@exemple.com"
+                class="block text-brown-800 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm shadow-sm outline-none transition-all placeholder:text-gray-400 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/25 sm:text-base">
             </div>
-    
+
             <!-- Password -->
-            <div>
-              <label class="block text-sm font-medium text-gray-800">Mot de passe</label>
-              <input type="password" placeholder="••••••••" 
-                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] outline-none transition-all">
+            <div class="space-y-2">
+              <label class="ml-1 block text-sm font-semibold text-gray-700 sm:text-base">Mot de passe</label>
+              <input type="password" placeholder="••••••••"
+                class="block text-brown-800 w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm shadow-sm outline-none transition-all placeholder:text-gray-400 focus:border-[var(--primary-color)] focus:ring-2 focus:ring-[var(--primary-color)]/25 sm:text-base">
             </div>
-    
+
             <!-- Options -->
-            <div class="flex items-center justify-between text-sm">
+            <div class="flex gap-3 mx-1 text-sm sm:flex-row sm:items-center justify-between">
               <label class="flex items-center text-gray-600">
-                <input type="checkbox" class="rounded border-gray-300 text-[var(--primary-color)] focus:ring-[var(--primary-color)]">
+                <input type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-[var(--primary-color)] focus:ring-[var(--primary-color)]">
                 <span class="ml-2">Se souvenir de moi</span>
               </label>
-              <a href="#" class="text-[var(--primary-color)] hover:underline font-semibold">Mot de passe oublié ?</a>
+              <a href="#" class="font-semibold text-[var(--primary-color)] hover:underline">Mot de passe oublié ?</a>
             </div>
-    
+
             <!-- Submit Button -->
-            <button type="submit" 
-              class="w-full py-3 px-4 bg-[var(--primary-color)] hover:bg-[#e88a1b] text-white font-bold rounded-lg shadow-lg hover:shadow-[var(--primary-color)]/30 transition-all transform active:scale-[0.98]">
+            <button type="submit"
+              class="w-full rounded-xl bg-[var(--primary-color)] px-4 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:bg-[#e88a1b] hover:shadow-[var(--primary-color)]/30 active:scale-[0.98]">
               Se connecter
             </button>
           </form>
-    
-          <p class="mt-8 text-center text-sm text-gray-600">
-            Pas encore de compte ? 
-            <a href="#" class="text-[var(--primary-color)] font-bold hover:underline">S'inscrire</a>
-          </p>
-        
+          <!-- section ou avec  -->
+          <div class="w-full px-8 yo2:px-16 lg:px-60">
+            <div class="mb-5 flex items-center gap-3 text-gray-400">
+              <span class="h-px flex-1 bg-gray-200"></span>
+              <span class="text-md font-medium">ou avec</span>
+              <span class="h-px flex-1 bg-gray-200"></span>
+            </div>
+            <div class="flex items-center justify-center gap-4">
+              <button type="button" aria-label="Connexion avec Google"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.805 12.23c0-.64-.057-1.255-.164-1.846H12v3.49h5.508a4.708 4.708 0 0 1-2.044 3.089v2.564h3.307c1.936-1.783 3.034-4.407 3.034-7.297z" fill="#4285F4"/>
+                  <path d="M12 22c2.76 0 5.074-.915 6.765-2.473l-3.307-2.564c-.915.614-2.084.978-3.458.978-2.66 0-4.913-1.797-5.72-4.214H2.86v2.642A9.998 9.998 0 0 0 12 22z" fill="#34A853"/>
+                  <path d="M6.28 13.727A5.996 5.996 0 0 1 5.96 12c0-.6.108-1.181.32-1.727V7.63H2.86A9.998 9.998 0 0 0 2 12c0 1.611.386 3.136 1.068 4.37l3.212-2.643z" fill="#FBBC05"/>
+                  <path d="M12 6.06c1.5 0 2.846.516 3.906 1.53l2.93-2.93C17.07 3.02 14.756 2 12 2A9.998 9.998 0 0 0 2.86 7.63l3.42 2.642C7.086 7.857 9.34 6.06 12 6.06z" fill="#EA4335"/>
+                </svg>
+              </button>
+              <button type="button" aria-label="Connexion avec Facebook"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-[#1877F2] shadow-sm transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.5 9H16V6h-2.5C10.99 6 9 7.99 9 10.5V13H7v3h2v5h3v-5h2.4l.6-3H12v-2.5c0-.83.67-1.5 1.5-1.5z"/>
+                </svg>
+              </button>
+              <button type="button" aria-label="Connexion avec X"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-black shadow-sm transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.24 2H21l-6.56 7.5L22 22h-5.95l-4.67-6.1L6.03 22H3.27l7.01-8.01L2 2h6.1l4.22 5.55L18.24 2zm-2.08 18h1.65L7.2 3.9H5.43L16.16 20z"/>
+                </svg>
+              </button>
+              <button type="button" aria-label="Connexion avec Apple"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-black shadow-sm transition hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.8 12.6c.02 2.17 1.91 2.9 1.93 2.91-.02.05-.3 1.03-.99 2.04-.6.87-1.22 1.74-2.2 1.76-.96.02-1.27-.57-2.37-.57-1.1 0-1.45.55-2.35.59-.95.03-1.67-.95-2.27-1.81-1.23-1.77-2.17-5-.9-7.2.63-1.09 1.76-1.78 2.98-1.8.93-.02 1.8.62 2.37.62.57 0 1.63-.77 2.74-.66.47.02 1.78.19 2.63 1.44-.07.04-1.57.92-1.55 2.68zM14.2 5.5c.5-.6.84-1.43.75-2.25-.72.03-1.6.48-2.12 1.08-.46.53-.86 1.38-.75 2.19.8.06 1.62-.4 2.12-1.02z"/>
+                </svg>
+              </button>
+            </div>
+            <p class="mt-6 text-center text-sm text-gray-500">
+              Don't have an account?
+              <a href="#" class="font-semibold text-[var(--primary-color)] hover:underline">Inscription</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    </div>
+  </div>
 
-  </body>
-</html>
-<!-- bg-[var(--primary-color)] -->
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html><!-- bg-[var(--primary-color)] -->

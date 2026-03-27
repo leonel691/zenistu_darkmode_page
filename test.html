@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="w-screen h-screen flex items-center justify-center">
+  <!-- section image -->
+  <div class="flex items-center justify-center w-1/2 h-full bg-[image:var(--zenit-img)] bg-position-[0px_-320px] bg-cover bg-no-repeat ">
+  </div>
+  <!-- section formulaire -->
+  <div class="flex flex-col justify-center items-center bg-gradient-to-b from-[var(--primary-color)]/50 to-[var(--primary-color)]/90 justify-center w-1/2 h-full">
+    <div class="items-center justify-end flex bg-pink-900 w-full">
+        <button id="dark-light" class="rounded-full w-9 h-9 p-1 bg-green-400">
+          <svg class="ml-[0.06rem] dark-mode" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path
+              d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+          </svg>
+          <svg class="hidden light-mode" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+            <path d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/>
+          </svg>
+        </button>
+    </div>
+    <!-- section formulaire -->
+    <div class="bg-white backdrop-blur-md shadow-2xl border border-white/30 rounded-2xl">
+      <h2 class="text-3xl font-bold text-center text-[var(--primary-color)] mb-20 ">Connexion</h2>
+      <form action="#" class="space-y-6">
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium text-gray-800">Adresse Email</label>
+          <input type="email" placeholder="nom@exemple.com"
+            class=" block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] outline-none transition-all">
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label class="block text-sm font-medium text-gray-800">Mot de passe</label>
+          <input type="password" placeholder="••••••••"
+            class=" block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] outline-none transition-all">
+        </div>
+
+        <!-- Options -->
+        <div class="flex items-center justify-between text-sm">
+          <label class="flex items-center text-gray-600">
+            <input type="checkbox"
+              class="rounded border-gray-300 text-[var(--primary-color)] focus:ring-[var(--primary-color)]">
+            <span class="ml-2">Se souvenir de moi</span>
+          </label>
+          <a href="#" class="text-[var(--primary-color)] hover:underline font-semibold">Mot de passe oublié ?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="w-full py-3 px-4 bg-[var(--primary-color)] hover:bg-[#e88a1b] text-white font-bold rounded-lg shadow-lg hover:shadow-[var(--primary-color)]/30 transition-all transform active:scale-[0.98]">
+          Se connecter
+        </button>
+      </form>
+      <p class=" text-center text-sm text-gray-600">
+        Pas encore de compte ?
+        <a href="#" class="text-[var(--primary-color)] font-bold hover:underline">S'inscrire</a>
+      </p>
+    </div>
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
+<!-- bg-[var(--primary-color)] -->
